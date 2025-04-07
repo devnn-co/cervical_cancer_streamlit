@@ -150,10 +150,11 @@ dump(decision_tree, "model.joblib")
 # get_app_response(prediction)
 #
 
-launch_website()
 
 def launch_website():
   print ("Click this link to try your web app:")
   public_url = ngrok.connect()
   print (public_url)
   !streamlit run --server.port 80 app.py >/dev/null
+    
+launch_website()
